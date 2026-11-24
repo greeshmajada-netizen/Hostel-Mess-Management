@@ -1,0 +1,181 @@
+/* ADMIN DASHBOARD */
+
+.admin-container {
+    width: 94%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 24px;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #e5f4df 0%, #f7fbf5 100%);
+    border-radius: 16px;
+    border-top: 4px solid #d4c451; /* Gold accent top border */
+}
+
+.admin-header {
+    background: linear-gradient(135deg, #3c5d33 0%, #274122 100%);
+    background-image: 
+        radial-gradient(rgba(212, 196, 81, 0.15) 1.5px, transparent 1.5px),
+        linear-gradient(135deg, #3c5d33 0%, #274122 100%);
+    background-size: 24px 24px, 100% 100%;
+    color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(39, 65, 34, 0.2);
+}
+
+.admin-header h1 {
+    margin: 0 0 8px;
+    color: #e6d86b; /* Warm gold heading color */
+}
+
+.admin-header p {
+    margin: 0;
+    color: #e2eedd;
+}
+
+.admin-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.admin-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(46, 74, 39, 0.07);
+    border: 1px solid #cce0c6;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.admin-card:hover {
+    border-color: #d4c451;
+}
+
+.admin-card h3 {
+    font-size: 14px;
+    color: #4f6b48;
+    margin-top: 0;
+}
+
+.admin-card .number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2e5e2e;
+}
+
+.admin-panel {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 12px rgba(46, 74, 39, 0.07);
+    border: 1px solid #cce0c6;
+}
+
+.admin-panel h2 {
+    color: #274122;
+    margin-top: 0;
+}
+
+.admin-filter {
+    padding: 10px 14px;
+    width: 100%;
+    max-width: 250px;
+    border: 1.5px solid #b8d3b0;
+    border-radius: 20px; /* Pill-style shape matching day buttons */
+    background-color: #f8fcf6;
+    color: #274122;
+    outline: none;
+}
+
+.admin-filter:focus {
+    border-color: #d4c451;
+}
+
+.admin-chart-row {
+    display: grid;
+    grid-template-columns: 65px 1fr 35px;
+    gap: 10px;
+    align-items: center;
+    margin: 15px 0;
+    color: #274122;
+}
+
+.admin-bar {
+    background: #e4f0e0;
+    height: 13px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.admin-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #328246 0%, #65792b 100%);
+    border-radius: 20px;
+    transition: width 0.3s;
+}
+
+.admin-review {
+    background: #e9f6e5; /* Soft mint card tint */
+    border: 1px solid #c5dfc0;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 12px;
+}
+
+.admin-review h4 {
+    margin: 0 0 8px;
+    color: #274122;
+}
+
+.admin-review p {
+    color: #3b5236;
+    overflow-wrap: anywhere;
+}
+
+.admin-stars {
+    color: #d4af37;
+    letter-spacing: 2px;
+}
+
+.admin-refresh {
+    background: #347d43;
+    color: #ffffff;
+    border: 1.5px solid #d4c451; /* Gold outline matching active Tuesday pill */
+    border-radius: 25px;
+    padding: 11px 22px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+}
+
+.admin-refresh:hover {
+    background: #274122;
+}
+
+.admin-empty {
+    color: #5c7556;
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media (min-width: 700px) {
+    .admin-summary {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-container {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .admin-panel {
+        padding: 15px;
+    }
+}
