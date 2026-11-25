@@ -44,6 +44,7 @@
     text-align: center;
 }
 
+
 /* Heading inside the timetable, if present */
 
 #timetable h2 {
@@ -170,7 +171,7 @@
 }
 
 /* =====================================
-   VEG AND NON-VEG OPTIONS
+   VEG OPTIONS
 ===================================== */
 
 .tt-food-options {
@@ -224,22 +225,10 @@
     letter-spacing: 0.8px;
     text-transform: uppercase;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
 }
 
-/* Non-veg tag: deep olive, still in the green family */
 
-#menu .nonveg-tag {
-    display: inline-block;
-    padding: 5px 14px;
-    border-radius: 999px;
-    color: #fff8e1;
-    background: linear-gradient(135deg, #6b7d1f, #4a5a14);
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
 
 /* =====================================
    DESSERT SECTION
@@ -323,5 +312,89 @@
 
     .tt-meal h3 {
         font-size: 18px;
+    }
+}
+
+/* =====================================
+   CENTER BREAKFAST, LUNCH, SNACKS & DINNER
+===================================== */
+
+/* Center the complete menu */
+#menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Center the main timetable card */
+.tt-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Center each meal section */
+.tt-meal {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Center meal headings */
+.tt-meal h3 {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center food cards instead of placing them on the left */
+.tt-food-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 18px;
+}
+
+/* Center individual food cards */
+.tt-food-options > div {
+    flex: 0 1 560px;
+    width: 100%;
+    max-width: 560px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center food descriptions */
+.tt-food-options p {
+    text-align: center;
+}
+
+/* Mobile responsive */
+@media (max-width: 650px) {
+    .tt-food-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tt-food-options > div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tt-meal {
+        padding: 15px;
     }
 }

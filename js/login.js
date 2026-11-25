@@ -60,6 +60,7 @@
         hideAllSections();
 
         section.hidden = false;
+        section.classList.remove("logged-in");
 
         section.innerHTML = `
             <div class="login-container">
@@ -179,6 +180,7 @@
         hideAllSections();
 
         section.hidden = false;
+        section.classList.add("logged-in");
         section.innerHTML = `
     <div class="welcome-box">
         <h2>Welcome, ${user.username}!</h2>
